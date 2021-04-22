@@ -1,0 +1,18 @@
+<div>
+    <h2>Add</h2>
+    <div>
+        <label>Title:
+            <input [(ngModel)]="taskData.title" placeholder="Task title"/>
+        </label><br/>
+        <label>Description:
+            <input [(ngModel)]="taskData.description" placeholder="Description"/>
+        </label><br/>
+        <label>Priority:
+            <select [(ngModel)]="taskData.priority">
+                <option [ngValue]="null">Select one...</option>
+                <option *ngFor="let type of priorityEnum | keyvalue" [ngValue]="type.value">{{type.value}}</option>
+            </select>
+        </label>
+    </div>
+    <button (click)="addTask()">Create</button>
+</div>

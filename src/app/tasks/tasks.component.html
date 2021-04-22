@@ -1,0 +1,16 @@
+<h2>Tasks</h2>>
+
+<div>
+    <button (click)="goToAdd()">
+        Add Task
+    </button>
+</div>
+
+<ul class="tasks">
+    <li *ngFor="let t of tasks; let i=index;">
+        <a routerLink="/tasks/{{t.id}}">
+            <span class="badge">{{i+1}}|</span> {{t.title}}
+        </a>
+        <button class="delete" title="delete task" (click)="deleteTask(t.id)">Delete</button>
+    </li>
+</ul>

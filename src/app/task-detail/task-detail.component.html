@@ -1,0 +1,12 @@
+<div *ngIf="task" class="tasks">
+    <h2>{{task.title | uppercase}}}}</h2>
+    <div><span>Description: </span>{{task.description}}</div>
+    <div><span>Priority: </span>{{task.priority}}</div>
+    <div><span>Owner: </span>{{task.user}}</div>
+    <div><span>Watchers: </span>{{task.watchers}}</div>
+    <div>
+        <button routerLink="/tasks/{{task.id}}">
+            Edit
+        </button>
+    </div>
+</div>>
